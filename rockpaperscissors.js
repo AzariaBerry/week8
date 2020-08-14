@@ -8,14 +8,15 @@ let computerScore = 0;
 let currentRoundNumber = 1;
 let playerSelection;
 let computerSelection;
-document.getElementById('rock').onclick = user;
-document.getElementById('paper').onclick = user;
-document.getElementById('scissors').onclick = user;
 
-function user(){
-    var userChoice = this.id;
-    console.log(playerName +" "+ userChoice);
-}
+//document.getElementById('rock').onclick = user;
+//document.getElementById('paper').onclick = user;
+//document.getElementById('scissors').onclick = user;
+
+//function user(){
+   // var userChoice = this.id;
+    //console.log(playerName +" "+ userChoice);
+//}
 
 for ( let i = 0 ; i < buttons.length ; i++){
     buttons[i].addEventListener('click', playGame);
@@ -25,16 +26,17 @@ function playGame(e){
     //setup player's selection
     playerSelection = e.target.innerText;
     //setup a random number to select for computer
-    //selects a number between 0 and 1 (1 not-inclusive)
-    computerSelection = ((Math.random()*3)+1);
+    //gives random number between 1 and 3
+    computerNumber = Math.round(Math.random() * 3 + 1 );
+    console.log(computerNumber);
 
     //if computerSelection is less than .34, computer selects Rock
-    if (computerSelection = 1){
-        computerSelection = 'Rock';
-    } else if (computerSelection = 2){
-        computerSelection = 'Paper';
-    } else {
-        computerSelection = 'Scissors';
+    if (computerNumber = 1){
+        computerSelection = 'paper';
+    } else if (computerNumber = 2){
+        computerSelection = 'rock';
+    } else if (computerNumber = 3) {
+        computerSelection = 'scissor';
     }
 
     console.log(computerSelection);
@@ -78,24 +80,24 @@ function messenger(selectionMessage){
                 return 'Draw';
             }
 
-            if (player === 'Rock'){
-                if(computer === 'Paper'){
+            if (player === 'rock'){
+                if(computer === 'paper'){
                     return 'Computer';
                 } else {
                     return 'Player';
                 }
             }
 
-            if (player === 'Paper'){
-                if (computer === 'Scissors'){
+            if (player === 'paper'){
+                if (computer === 'scissor'){
                     return 'Computer';
                 } else {
                     return 'Player';
                 }
             }
 
-            if (player === 'Scissors'){
-                if (computer === 'Rock'){
+            if (player === 'scissor'){
+                if (computer === 'rock'){
                     return 'Computer';
                 } else {
                     return 'Player';
