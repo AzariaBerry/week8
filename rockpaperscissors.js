@@ -27,15 +27,15 @@ function playGame(e){
     playerSelection = e.target.innerText;
     //setup a random number to select for computer
     //gives random number between 1 and 3
-    computerNumber = Math.round(Math.random() * 3 + 1 );
+    computerNumber =Math.random();
     console.log(computerNumber);
 
-    //if computerSelection is less than .34, computer selects Rock
-    if (computerNumber = 1){
+    //if computerSelection is less than .34, computer selects paper
+    if (computerNumber < .34){
         computerSelection = 'paper';
-    } else if (computerNumber = 2){
+    } else if (computerNumber <= .67){
         computerSelection = 'rock';
-    } else if (computerNumber = 3) {
+    } else {
         computerSelection = 'scissor';
     }
 
