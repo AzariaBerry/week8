@@ -6,6 +6,8 @@ const winnerScores = [0,0];
 let humanScore = 0;
 let computerScore = 0;
 let currentRoundNumber = 1;
+let playerSelection;
+let computerSelection;
 document.getElementById('rock').onclick = user;
 document.getElementById('paper').onclick = user;
 document.getElementById('scissors').onclick = user;
@@ -21,15 +23,15 @@ for ( let i = 0 ; i < buttons.length ; i++){
 
 function playGame(e){
     //setup player's selection
-    let playerSelection = e.target.innerText;
+    playerSelection = e.target.innerText;
     //setup a random number to select for computer
     //selects a number between 0 and 1 (1 not-inclusive)
-    let computerSelection = Math.random();
+    computerSelection = ((Math.random()*3)+1);
 
     //if computerSelection is less than .34, computer selects Rock
-    if (computerSelection < .34){
+    if (computerSelection = 1){
         computerSelection = 'Rock';
-    } else if (computerSelection <= .67){
+    } else if (computerSelection = 2){
         computerSelection = 'Paper';
     } else {
         computerSelection = 'Scissors';
@@ -37,9 +39,9 @@ function playGame(e){
 
     console.log(computerSelection);
     document.getElementById('results').innerHTML = playerName + " chose " + playerSelection + ", " + "computer chose " + computerSelection;
-}
 
-let result = checkWinner(playerchoice, computerchoice);
+
+let result = checkWinner(playerSelection, computerSelection);
 
             //output scores
             if (result === 'Player'){
@@ -63,11 +65,15 @@ let result = checkWinner(playerchoice, computerchoice);
             //output player and computer's selections
             messenger('Player: <strong>' + playerSelection + '</strong> Computer: <strong>' + computerSelection + '</strong><br>' + result);
 
-        function messenger(selectionMessage){
+}
+
+function messenger(selectionMessage){
             message.innerHTML = selectionMessage;
         }
 
         function checkWinner(player, computer){
+            console.log(`${typeof player} ${player}`);
+            console.log(`${typeof computer} ${computer}`);
             if (player === computer){
                 return 'Draw';
             }
@@ -96,5 +102,3 @@ let result = checkWinner(playerchoice, computerchoice);
                 }
             }
         }
-
-
