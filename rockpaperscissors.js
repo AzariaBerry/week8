@@ -1,4 +1,9 @@
 var playerName = prompt('whats your name?');
+//try leaving name prompt empty
+if (playerName === "") {
+    alert("ooh a mysterious one!")
+    playerName = ('Mysterious one')
+}
 const message = document.querySelector('.message');
 const score = document.querySelector('.score');
 const buttons = document.querySelectorAll('button');
