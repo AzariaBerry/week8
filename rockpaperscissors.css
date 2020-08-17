@@ -1,9 +1,11 @@
 body {
-    text-align: center;
-    color: aquamarine;
-    background-color: black;
+    background: darkorchid;
+    color: deepskyblue;
+    
 }
 
 div {
     font-size: large;
+    text-align: center;
 }
+

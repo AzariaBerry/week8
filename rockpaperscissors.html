@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <!-- Latest compiled and minified CSS -->
+    <!--The css should be after the bootstrap css if not the background color wont change-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stlyesheet" type="text/css" href="rockpaperscissors.css">
+    <link rel="stylesheet" type="text/css" href="rockpaperscissors.css">
+    
 </head>
 <body>
     <div>
@@ -29,6 +31,33 @@
     <button class="btn btn-success btn-lg" id="paper" type='button'>paper</button>
     <button class="btn btn-info btn-lg" id="scissors" type='button'>scissor</button>
     </div>
+
+
+    <div>
+        <p>Enjoy some music with this game!</p>
+        <!--I put in a nice list of songs related to Rock Paper Scissor-->
+        <!--Not autoplay for accessiblity-->
+    <div id="playlist">
+        <div id="gonRap">
+            <p>Gon Rock Paper scissors rap</p>
+            <audio controls="controls">
+                <source src="GON RAP rps.mp3"/>
+            </audio>
+        </div>
+        <div id="country">
+            <p>Country Rock Paper Scissors</p>
+            <audio controls="controls">
+                <source src="Rps.mp3"/>
+            </audio>
+        </div>
+        <div id="dubstep">
+            <p>Dubstep Rock paper Scissors</p>
+            <audio controls="controls">
+                <source src="rps dub.mp3"/>
+            </audio>
+        </div>
+    </div>
+</div>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
